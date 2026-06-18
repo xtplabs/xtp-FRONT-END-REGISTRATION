@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/logo.png">
+
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="" width="25%">
+
+        <h1><a href="/">WELCOME TO XTP PAGE</a></h1>
+        <nav>
+        </nav>
+    </header>
+
+    <main>
+        <div class="auth-box">
+            <form action="/join" method="POST">
+                <h1>LOG IN</h1><br>
+
+                <% if (errors && errors.length > 0) { %>
+                    <% errors.forEach(error => { %>
+                        <p class="notice">
+                            <%= error %>
+                        </p>
+                        <% }) %>
+                            <% } %>
+
+                                <% if (success) { %>
+                                    <p class="success">
+                                        <%= success %>
+                                    </p>
+                                    <% } %>
+
+                                        <label for="username">USERNAME:</label>
+                                        <input type="text" placeholder="username......" id="username" name="username" required>
+
+                                        <label for="password">PASSWORD:</label>
+                                        <input type="password" placeholder="password......" id="password" name="password" required><br>
+
+                                        <button>submit</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <h1>WELCOME TO XTP</h1>
+        <p>AIM: BUILDING INOVATIVE FUTURE</p>
+    </footer>
+
+</body>
+
+</html>

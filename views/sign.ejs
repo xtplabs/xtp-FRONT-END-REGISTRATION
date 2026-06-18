@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SIGN UP</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/logo.png">
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <img src="logo.png" alt="logo" width="25%">
+
+        <h1>
+            <a href="/">WELCOME TO XTP PAGE</a>
+        </h1>
+
+    </header>
+
+
+
+    <main>
+
+        <div class="auth-box">
+
+
+            <form action="/register" method="POST" autocomplete="off">
+
+
+                <% if (errors && errors.length > 0) { %>
+
+                    <% errors.forEach(error => { %>
+
+                        <p class="notice">
+                            <%= error %>
+                        </p>
+
+                        <% }) %>
+
+                            <% } %>
+
+
+
+
+
+                                <h1>CREATE A NEW ACCOUNT / SIGN UP</h1>
+
+
+
+
+                                <label>FULL NAME:</label>
+
+                                <input type="text" name="name" placeholder="Full name..." autocomplete="off" value="" required>
+
+
+
+
+                                <br><br>
+
+
+
+
+                                <label>USERNAME:</label>
+
+                                <input type="text" name="username" placeholder="Username..." autocomplete="off" value="" required>
+
+
+
+
+
+                                <br><br>
+
+
+
+
+                                <label>PASSWORD:</label>
+
+
+                                <input type="password" name="password" placeholder="Password..." autocomplete="new-password" required minlength="5">
+
+
+
+
+
+                                <br><br>
+
+
+
+
+
+                                <label>PHONE NUMBER:</label>
+
+
+                                <input type="tel" name="phone" pattern="[0-9]+" placeholder="Phone..." autocomplete="off" value="" required>
+
+
+
+
+
+
+                                <br><br>
+
+
+
+
+
+
+                                <label>GMAIL:</label>
+
+
+                                <input type="email" name="gmail" placeholder="Gmail..." autocomplete="off" value="" required>
+
+
+
+
+
+
+
+                                <br><br>
+
+
+
+
+
+
+                                <label>SELECT SKILL:</label>
+
+
+                                <select name="course" required>
+
+
+<option value="" selected disabled>
+Select Skill
+</option>
+
+
+
+<optgroup label="ICT / TECH COURSES">
+
+
+<option value="Computer Basics">
+Computer Basics
+</option>
+
+
+<option value="Excel Functions">
+Excel Functions
+</option>
+
+
+<option value="Graphic Design">
+Graphic Design
+</option>
+
+
+<option value="Video Editing">
+Video Editing
+</option>
+
+
+<option value="Web Development">
+Web Development
+</option>
+
+
+<option value="Software Development">
+Software Development
+</option>
+
+
+<option value="Cyber Security">
+Cyber Security
+</option>
+
+
+<option value="SQL">
+SQL
+</option>
+
+
+<option value="Artificial Intelligence">
+Artificial Intelligence
+</option>
+
+
+</optgroup>
+
+
+
+
+
+<optgroup label="MUSIC TRAINING">
+
+
+<option value="Guitar Class">
+Guitar Class
+</option>
+
+
+<option value="Piano Class">
+Piano Class
+</option>
+
+
+<option value="Drums">
+Drums
+</option>
+
+
+<option value="Vocal Class">
+Vocal Class
+</option>
+
+
+</optgroup>
+
+
+
+</select>
+
+
+
+
+
+
+
+                                <br><br>
+
+
+
+
+
+                                <label>SELECT GENDER:</label>
+
+
+                                <select name="gender" required>
+
+
+<option value="" disabled selected>
+Select Gender
+</option>
+
+
+<option value="male">
+MALE
+</option>
+
+
+<option value="female">
+FEMALE
+</option>
+
+
+</select>
+
+
+
+
+
+
+
+                                <br><br>
+
+
+
+
+
+                                <button type="submit">
+
+SUBMIT
+
+</button>
+
+
+
+
+            </form>
+
+
+        </div>
+
+
+    </main>
+
+
+
+
+
+
+    <footer>
+
+        <h1>WELCOME TO XTP</h1>
+
+        <p>
+            AIM: BUILDING INNOVATIVE FUTURE
+        </p>
+
+
+    </footer>
+
+
+
+
+</body>
+
+</html>

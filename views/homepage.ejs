@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XTP FRONT END COURSE REGISTRATION</title>
+    <link rel="icon" href="/logo.png">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <nav>
+        <img src="/logo.png" alt="" width="20%">
+        <h1>XTP BEGINNERS CODING COURSE</h1>
+    </nav>
+    <form action="/register" method="POST">
+
+        <% errors.forEach(error => { %>
+            <p class="notice">
+                <%= error %>
+            </p>
+            <% }) %>
+
+                <fieldset class="field">
+                    <legend>FILL IN THE FORM TO REGISTER</legend>
+
+                    <input type="text" id="name" name="name" placeholder="Enter your full name..." autocomplete="off" value="<%= formData.name || '' %>">
+                    <br><br>
+
+                    <input type="number" id="number" name="number" placeholder="Enter your phone number..." autocomplete="off" value="<%= formData.number || '' %>">
+                    <br><br>
+
+                    <input type="email" name="email" id="email" placeholder="Enter your email (optional)" autocomplete="off" value="<%= formData.email || '' %>">
+                    <br><br>
+
+                    <select name="gender" id="gender">
+                <option value="">Select Gender</option>
+
+                <option
+                    value="male"
+                    <%= formData.gender === 'male' ? 'selected' : '' %>>
+                    Male
+                </option>
+
+                <option
+                    value="female"
+                    <%= formData.gender === 'female' ? 'selected' : '' %>>
+                    Female
+                </option>
+            </select>
+
+                    <br><br>
+
+                    <button type="submit">Submit</button>
+                </fieldset>
+
+    </form>
+
+</body>
+
+</html>
